@@ -13,7 +13,6 @@ function keySequence(keySequence, threshold, fn) {
   var deadline = null;
 
   var reset = function() {
-    console.log('reset');
     keyspressed = [];
   }
 
@@ -31,7 +30,6 @@ function keySequence(keySequence, threshold, fn) {
     var character = String.fromCharCode(keyCode);
 
     keyspressed.push(character);
-    console.log(keyspressed.join(''), keySequence)
     if (keyspressed.join('') === keySequence) {
       fn();
     }
